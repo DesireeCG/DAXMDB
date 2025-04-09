@@ -1,6 +1,6 @@
 const URL = "https://backend-fincher.onrender.com/massbank/search/";
 
-export async function getCompuestos({ formula = "", masa = "", nombre = "", mass_tolerance = 0.00001, limit = 100 }) {
+export async function getCompuestos({ formula = "", masa = "", nombre = "", mass_tolerance = 0.1, limit = 100 }) {
     try {
         const queryParams = new URLSearchParams();
 
