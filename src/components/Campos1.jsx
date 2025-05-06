@@ -2,8 +2,12 @@ import { Box, Flex, Text, Button, Input, Spinner, VStack } from "@chakra-ui/reac
 import { useState, useEffect } from "react";
 import { Resultados } from "./Resultados";
 import { getCompuestos } from "../services/data";
+import { useTranslation } from "react-i18next";
 
 export function Campos1({ onBuscar }) {
+
+    const { t } = useTranslation(); //función para traducir
+
     const [formula, setFormula] = useState("");
     const [masa, setMasa] = useState("");
     const [nombre, setNombre] = useState("");
@@ -32,12 +36,12 @@ export function Campos1({ onBuscar }) {
     return (
         <Box ml="10%" mr="15%" mt="20px">
             <Flex gap="4">
-                <Text fontSize="1.5rem" fontWeight="normal" color="gray.600" opacity="0.6">
-                    Rellena al menos un campo solicitado para comenzar la búsqueda:
+                <Text fontSize="1.5rem" fontWeight="normal" color="gray.900" opacity="0.6">
+                    {t("Instrucciones")}
                 </Text>
-                <Box marginLeft="3%">
+                <Box marginLeft="9%">
                     <Button bgColor="#7FE8F1" w="200px" onClick={handleSearch}>
-                        Buscar
+                        {t("buscar")}
                     </Button>
                 </Box>
             </Flex>
@@ -45,17 +49,17 @@ export function Campos1({ onBuscar }) {
             {/* Campos de entrada */}
             <Flex mt="4" gap="4" align="center">
                 <Flex align="center">
-                    <Text marginLeft="10%" fontWeight="bold" mr="2" fontSize="xl">Fórmula:</Text>
+                    <Text marginLeft="10%" fontWeight="bold" mr="2" fontSize="xl">{t("formula")}</Text>
                     <Input bg="white" placeholder="Ej. C6H12O6" w="202px" value={formula} onChange={(e) => setFormula(e.target.value)} />
                 </Flex>
 
                 <Flex align="center">
-                    <Text fontWeight="bold" mr="2" fontSize="xl">Masa:</Text>
+                    <Text fontWeight="bold" mr="2" fontSize="xl">{t("masa")}</Text>
                     <Input placeholder="Ej. 256.24" w="202px" bg="white" value={masa} onChange={(e) => setMasa(e.target.value)} />
                 </Flex>
 
                 <Flex align="center">
-                    <Text fontWeight="bold" mr="2" fontSize="xl">Nombre Común:</Text>
+                    <Text fontWeight="bold" mr="2" fontSize="xl">{t("nombre_comun")}</Text>
                     <Input placeholder="Ej. Glucosa" w="202px" bg="white" value={nombre} onChange={(e) => setNombre(e.target.value)} />
                 </Flex>
             </Flex>

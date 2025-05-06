@@ -1,0 +1,14 @@
+{
+    "descargar_txt": "Download Results .txt",
+    "no_resultados": "No results found",
+    "buscar": "Search",
+    "titulo_buscador":"Chemical Formula Search in Databases",
+    "Masa_exacta": "Exact Mass",
+  
+    "Instrucciones": "At least one field is required to start the search:",
+    "Resultados": "Resultados de la búsqueda: ",
+    "nombre_comun": "Common Name",
+    "formula": "Formula:",
+    "masa": "Mass:"
+  }
+  

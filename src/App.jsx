@@ -10,7 +10,7 @@ export function App() {
   const [mostrarCampos2, setMostrarCampos2] = useState(true);
 
   return (
-    <Box bg="#F9F2E7" minHeight="100vh">
+    <Box bg="#f8fdff" minHeight="100vh" >
       <Header />
       <TitleSection />
       {/* Pasamos la función que oculta Campos2 */}

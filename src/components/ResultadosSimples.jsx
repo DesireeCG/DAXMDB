@@ -36,7 +36,7 @@ export function ResultadosSimples({ datos }) {
     return (
         <Box mt="6">
             {/* Botón de descarga */}
-            <Box mb="8">
+            <Box mb="8" ml="50%" mr="10%">
                 <Button colorScheme="green" variant="solid" onClick={descargarTXT}>
                     Descargar TXT
                 </Button>
