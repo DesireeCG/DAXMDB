@@ -40,6 +40,7 @@ export function Campos1({ onBuscar }) {
                     {t("Instrucciones")}
                 </Text>
                 <Box marginLeft="9%">
+                    
                     <Button bgColor="#7FE8F1" w="200px" onClick={handleSearch}>
                         {t("buscar")}
                     </Button>
@@ -72,9 +73,18 @@ export function Campos1({ onBuscar }) {
                 </VStack>
             ) : (
                 resultados.length > 0 ? (
-                    <Resultados datos={resultados} />
+                    <>
+                        <Text mt="6" fontWeight="bold" color="gray.700">
+                            {t("numero_resultados", { count: resultados.length })}
+                        </Text>
+                        <Resultados datos={resultados} />
+                    </>
+                    
                 ) : (
-                    <Text mt="6" color="gray.500">{t("No_resultados")}</Text>
+                    resultados.length > 0 (
+                         <Text mt="6" color="gray.500">{t("No_resultados")}</Text>
+                    )
+                   
                 )
             )}
         </Box>

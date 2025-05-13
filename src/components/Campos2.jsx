@@ -133,6 +133,7 @@ export function Campos2() {
 
             {/* Resultados */}
             {resultados.length > 0 ? (
+                
                 <Resultados datos={resultados} />
             ) : (
                 <Text mt="6" color="gray.800">{t("No_resultados")}</Text>

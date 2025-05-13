@@ -10,7 +10,10 @@
     "nombre_comun": "Common Name",
     "formula": "Formula:",
     "masa": "Mass:",
+    "numero_resultados": "{{count}} Result were found",
+
     "Cargando": "Loading...",
+
     "No_resultados": "No results found",
 
     "Instrucciones_2": "Enter the following fields if you want a more precise search:",

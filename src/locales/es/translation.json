@@ -8,6 +8,7 @@
     "nombre_comun": "Nombre Común",
     "formula": "Fórmula:",
     "masa": "Masa:",
+    "numero_resultados": "Se encontraron {{count}} resultados",
     "Cargando": "Cargando...",
     "No_resultados":"No se encontraron resultados",
 
