@@ -9,6 +9,12 @@
     "Resultados": "Resultados de la búsqueda: ",
     "nombre_comun": "Common Name",
     "formula": "Formula:",
-    "masa": "Mass:"
+    "masa": "Mass:",
+    "Cargando": "Loading...",
+    "No_resultados": "No results found",
+
+    "Instruccioness_2": "Enter the following fields if you want a more precise search:",
+    "Abundancia":"Abundance"
+
   }
   

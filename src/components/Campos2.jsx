@@ -70,11 +70,11 @@ export function Campos2() {
             {/* Título y botón de búsqueda */}
             <Flex gap="4">
                 <Text fontSize="1.5rem" fontWeight="normal" color="gray.900" opacity="0.6">
-                    Ingrese los siguientes campos si deseas una búsqueda más precisa:
+                    {t("Instrucciones_2")}
                 </Text>
                 <Box marginLeft="3%">
                     <Button bgColor="#7FE8F1" w="200px" onClick={handleSearch}>
-                        Buscar
+                        {t("buscar")}
                     </Button>
                 </Box>
             </Flex>
@@ -85,7 +85,7 @@ export function Campos2() {
                     <Thead>
                         <Tr bg="cyan.200">
                             <Th textColor="gray.900" textAlign="center">m/z</Th>
-                            <Th textColor="gray.900" textAlign="center">Abundancia</Th>
+                            <Th textColor="gray.900" textAlign="center">{t("Abundancia")}</Th>
                         </Tr>
                     </Thead>
                     {/* Se agrega maxHeight y overflow para hacer scroll vertical si es necesario */}
@@ -135,7 +135,7 @@ export function Campos2() {
             {resultados.length > 0 ? (
                 <Resultados datos={resultados} />
             ) : (
-                <Text mt="6" color="gray.800">No se encontraron resultados</Text>
+                <Text mt="6" color="gray.800">{t("No_resultados")}</Text>
             )}
             </Box>
         

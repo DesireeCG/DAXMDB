@@ -68,13 +68,13 @@ export function Campos1({ onBuscar }) {
             {isLoading ? (
                 <VStack mt="6" spacing="4" align="center">
                     <Spinner color="teal.600" size="xl" />
-                    <Text color="teal.600">Loading...</Text>
+                    <Text color="teal.600">{t("Cargando")}</Text>
                 </VStack>
             ) : (
                 resultados.length > 0 ? (
                     <Resultados datos={resultados} />
                 ) : (
-                    <Text mt="6" color="gray.500">No se encontraron resultados</Text>
+                    <Text mt="6" color="gray.500">{t("No_resultados")}</Text>
                 )
             )}
         </Box>

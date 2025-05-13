@@ -7,7 +7,12 @@
     "Instrucciones": "Se requiere al menos un campo para comenzar la búsqueda:",
     "nombre_comun": "Nombre Común",
     "formula": "Fórmula:",
-    "masa": "Masa:"
+    "masa": "Masa:",
+    "Cargando": "Cargando...",
+    "No_resultados":"No se encontraron resultados",
+
+    "Instrucciones2": "Ingrese los siguientes campos si deseas una búsqueda más precisa:",
+    "Abundancia":"Abundancia" 
 
 
   }
