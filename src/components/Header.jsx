@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom';
 import i18n from "i18next";
+import { Image } from "@chakra-ui/react"
 import { Box, Flex, Button, Spacer, Select } from "@chakra-ui/react";
+import logoipn from "../img/logo-ipn-horizontal.svg";
 
 
 export function Header() {
@@ -15,7 +17,15 @@ export function Header() {
   };
 
   return (
-    <Box bg="blue.100" px={6} py={4} boxShadow="md">
+    <>
+    {/* Logo del IPN */}
+    <Box px={6} py={4} boxShadow="md">
+      <Flex >
+        <img height="100px" width="300px" src={logoipn} alt="Logo IPN" />
+      </Flex>
+    </Box>
+    <Box bg="blue.100" px={6} py={4} >
+      
       <Flex align="center">
         <Button
           as={Link}
@@ -45,5 +55,7 @@ export function Header() {
         </Select>
       </Flex>
     </Box>
+    </>
+    
   );
 }

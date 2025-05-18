@@ -5,7 +5,7 @@
     "titulo_buscador":"Chemical Formula Search in Databases",
     "Masa_exacta": "Exact Mass",
   
-    "Instrucciones": "At least one field is required to start the search:",
+    "Instrucciones": "At least one field is required to start you search:",
     "Resultados": "Resultados de la búsqueda: ",
     "nombre_comun": "Common Name",
     "formula": "Formula:",
@@ -13,11 +13,20 @@
     "numero_resultados": "{{count}} Result were found",
 
     "Cargando": "Loading...",
+    "Filtrar": "Filtrar",
 
     "No_resultados": "No results found",
 
     "Instrucciones_2": "Enter the following fields if you want a more precise search:",
-    "Abundancia":"Abundance"
+    "Abundancia":"Abundance",
+    "Mostrando": "Showing",
+    "de": "of",
+    "resultados": "results",
+    "placeholder_mz": "e.g. 256.24",
+    "placeholder_abundancia": "e.g. 0.85",
+    "agregar_fila": "Add row",
+    "warning_no_peaks": "No valid peaks to search similarity."
+
 
   }
   

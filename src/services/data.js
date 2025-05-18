@@ -28,3 +28,48 @@ export async function getCompuestos({ formula = "", masa = "", nombre = "", limi
       return [];
     }
   }
+
+
+const URL_SIMILITUD = "https://daxmdb.onrender.com/buscar_massbank_picos";
+
+export async function getSimilitud(parametros = [], threshold = 0.01) {
+  try {
+    // 1) Construye el peak_list sólo con filas válidas
+    const peakList = parametros
+      .filter((p) => p.mz && p.abundancia)
+      .map((p) => `${p.mz};${p.abundancia}`)
+      .join(",");
+
+    if (!peakList) {
+      console.warn("No hay datos para buscar similitud");
+      return [];
+    }
+
+    // 2) Prepara los parámetros de consulta, incluyendo threshold
+    const queryParams = new URLSearchParams();
+    queryParams.append("peak_list", peakList);
+    queryParams.append("peak_list_threshold", threshold.toString());
+
+    // 3) Para depuración, mira la URL completa:
+    console.log("Fetching:", `${URL_SIMILITUD}?${queryParams.toString()}`);
+
+    // 4) Llamada a la API
+    const response = await fetch(`${URL_SIMILITUD}?${queryParams.toString()}`);
+    if (!response.ok) throw new Error("Error en la búsqueda de similitud");
+
+    const data = await response.json();
+    console.log("Respuesta de similitud:", data);
+
+    // 5) Normaliza la respuesta
+    const resultados = Array.isArray(data)
+      ? data
+      : data.records
+        ? data.records
+        : data.compuestos || [];
+
+    return resultados;
+  } catch (error) {
+    console.error("Error en getSimilitud:", error);
+    return [];
+  }
+}

@@ -4,16 +4,24 @@
     "buscar": "Buscar",
     "titulo_buscador":"Buscador de Fórmulas Químicas en Bases de Datos",
     "Masa_exacta": "Masa Exacta",
-    "Instrucciones": "Se requiere al menos un campo para comenzar la búsqueda:",
+    "Instrucciones": "Se requiere al menos un campo para comenzar su búsqueda:",
     "nombre_comun": "Nombre Común",
     "formula": "Fórmula:",
     "masa": "Masa:",
     "numero_resultados": "Se encontraron {{count}} resultados",
     "Cargando": "Cargando...",
     "No_resultados":"No se encontraron resultados",
+    "Filtrar": "Filtrar",
 
     "Instrucciones_2": "Ingrese los siguientes campos si deseas una búsqueda más precisa:",
-    "Abundancia":"Abundancia" 
+    "Abundancia":"Abundancia",
+    "Mostrando": "Mostrando",
+    "de": "de",
+    "resultados": "resultados",
+    "placeholder_mz": "Ej. 256.24",
+    "placeholder_abundancia": "Ej. 0.85",
+    "agregar_fila": "Agregar fila",
+    "warning_no_peaks": "No hay picos válidos para buscar similitud."
 
 
   }

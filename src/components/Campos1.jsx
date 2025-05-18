@@ -1,4 +1,4 @@
-import { Box, Flex, Text, Button, Input, Spinner, VStack } from "@chakra-ui/react";
+import { Box, Flex, Text, Button, Input, Spinner,Heading, Highlight, VStack, Stack } from "@chakra-ui/react";
 import { useState, useEffect } from "react";
 import { Resultados } from "./Resultados";
 import { getCompuestos } from "../services/data";
@@ -74,9 +74,17 @@ export function Campos1({ onBuscar }) {
             ) : (
                 resultados.length > 0 ? (
                     <>
-                        <Text mt="6" fontWeight="bold" color="gray.700">
-                            {t("numero_resultados", { count: resultados.length })}
-                        </Text>
+                        <Stack mt="10">
+                            <Heading size="lg" letterSpacing="tight">
+                                <Highlight
+                                query={[String(resultados.length)]}
+                                styles={{ color: "teal.600" }}
+                                >
+                                {t("numero_resultados", { count: resultados.length })}
+                                </Highlight>
+                            </Heading>
+                        </Stack>
+                        
                         <Resultados datos={resultados} />
                     </>
                     
