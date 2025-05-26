@@ -1,8 +1,9 @@
 import { Link } from 'react-router-dom';
 import i18n from "i18next";
-import { Image } from "@chakra-ui/react"
-import { Box, Flex, Button, Spacer, Select } from "@chakra-ui/react";
+import { Image, Stack } from "@chakra-ui/react"
+import { Box, Flex, Button, Spacer, Select, Text } from "@chakra-ui/react";
 import logoipn from "../img/logo-ipn-horizontal.svg";
+import logoupiiz from "../img/upiiz-icono.png";
 
 
 export function Header() {
@@ -20,9 +21,28 @@ export function Header() {
     <>
     {/* Logo del IPN */}
     <Box px={6} py={4} boxShadow="md">
-      <Flex >
-        <img height="100px" width="300px" src={logoipn} alt="Logo IPN" />
+      <Flex 
+        grap="4" 
+        direction={{ base: "column", md: "row" }}
+        justify="space-between"
+        align={{ base: "start", md: "center" }}
+        >
+        <Stack spacing={1}>
+          <img height="100px" width="300px" src={logoipn} alt="Logo IPN" />
+        </Stack>
+        <Stack spacing={2}>
+          
+        </Stack>
+        <Stack spacing={3}>
+          <Text>
+            
+          </Text>
+        </Stack>
+        <Stack spacing={4}>
+          <img height="100px" width="100px" src={logoupiiz} alt='Logo UPIIZ'/>
+        </Stack>
       </Flex>
+     
     </Box>
     <Box bg="blue.100" px={6} py={4} >
       

@@ -18,16 +18,11 @@ export function Resultados({ datos }) {
     }, [datos, filtroOrigen]);
 
     // Filtrar todos los datos segun la opcion seleccionada
-    const datosFiltrados =
-        filtroOrigen === "Todos"
-            ? datos
-            : filtroOrigen === "PubChem"
-                ? datos.filter((res) =>
-                    res.url.toLowerCase().includes("pubchem")
-                    )
-                : datos.filter((res) =>
-                    res.url.toLowerCase().includes("massbank")
-                    );
+    const datosFiltrados = (() => {
+    const origen = filtroOrigen.toLowerCase();
+    if (origen === "todos") return datos;
+    return datos.filter(res => res.url.toLowerCase().includes(origen));
+    })();
 
 
     const totalPaginas   = Math.ceil(datosFiltrados.length / pageSize);
@@ -73,6 +68,7 @@ export function Resultados({ datos }) {
                         <MenuItem onClick={() => setFiltroOrigen("Todos")}>Todos</MenuItem>
                         <MenuItem onClick={() => setFiltroOrigen("PubChem")}>PubChem</MenuItem>
                         <MenuItem onClick={() => setFiltroOrigen("MassBank")}>MassBank</MenuItem>
+                        <MenuItem onClick={() => setFiltroOrigen("HMDB")}>HMDB</MenuItem>
                     </MenuList>
                 </Menu>
                 <Button size="md" color="black" bgColor="#AEE239" onClick={descargarTXT}>
