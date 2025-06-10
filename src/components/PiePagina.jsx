@@ -21,7 +21,7 @@ export function PiePagina() {
           <Text fontSize="sm">ecabanasg@ipn.mx</Text>
           <Text fontSize="sm">Dr. Mario César Ordóñez Gutiérrez</Text>
           <Text fontSize="sm">mordonezg@ipn.mx</Text>
-          <Text fontSize="sm">Axel G. Ojeda Hernandez</Text>
+          <Text fontSize="sm">Axel Giovanni Ojeda Hernandez</Text>
           <Text fontSize="sm">aojedah1800@alumno.ipn.mx</Text>
           <Text fontSize="sm">Desireé Castañeda García</Text>
           <Text fontSize="sm">dcastanedag2100@alumno.ipn.mx</Text>
@@ -49,7 +49,7 @@ export function PiePagina() {
       <Image src={logoipn} alt="Logo IPN" w="150px" mt={4} mx="auto" />
       
       <Text fontSize="xs" textAlign="center" color="gray.600">
-        © {new Date().getFullYear()} Gobierno de México. Todos los derechos reservados.
+        © {new Date().getFullYear()} 2025. Todos los derechos reservados.
       </Text>
     </Box>
   );
