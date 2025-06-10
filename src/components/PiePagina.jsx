@@ -49,7 +49,7 @@ export function PiePagina() {
       <Image src={logoipn} alt="Logo IPN" w="150px" mt={4} mx="auto" />
       
       <Text fontSize="xs" textAlign="center" color="gray.600">
-        © {new Date().getFullYear()} 2025. Todos los derechos reservados.
+        © {new Date().getFullYear()} Todos los derechos reservados.
       </Text>
     </Box>
   );
