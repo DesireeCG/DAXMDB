@@ -36,8 +36,8 @@ export async function getSimilitud(parametros = [], threshold = 0.01) {
   try {
     // 1) Construye el peak_list sólo con filas válidas
     const peakList = parametros
-      .filter((p) => p.mz && p.abundancia)
-      .map((p) => `${p.mz};${p.abundancia}`)
+      .filter((p) => p.mz && p.intensidad)
+      .map((p) => `${p.mz};${p.intensidad}`)
       .join(",");
 
     if (!peakList) {

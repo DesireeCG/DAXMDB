@@ -10,16 +10,16 @@ import { getSimilitud } from "../services/data";
 export function Campos2({ onBuscar }) {
   const { t } = useTranslation();
 
-  const [parametros, setParametros] = useState([{ mz: "", abundancia: "" }]);
+  const [parametros, setParametros] = useState([{ mz: "", intensidad: "" }]);
   const [isLoading, setIsLoading] = useState(false);
   const [resultados, setResultados] = useState([]);
 
   // Agregar nueva fila
   const agregarFila = () => {
-    setParametros((prev) => [...prev, { mz: "", abundancia: "" }]);
+    setParametros((prev) => [...prev, { mz: "", intensidad: "" }]);
   };
 
-  // Actualizar mz o abundancia
+  // Actualizar mz o intensidad
   const handleChange = (index, field, value) => {
     setParametros((prev) => {
       const next = [...prev];
@@ -64,8 +64,10 @@ export function Campos2({ onBuscar }) {
         <Table variant="unstyled">
           <Thead>
             <Tr bg="cyan.200">
-              <Th textAlign="center">m/z</Th>
-              <Th textAlign="center">{t("abundancia")}</Th>
+              <Th textAlign="center">
+                <Text fontStyle="italic">m/z</Text>
+              </Th>
+              <Th textAlign="center">{t("Intensidad")}</Th>
             </Tr>
           </Thead>
           <Tbody maxH="300px" overflowY="auto" bg="gray.200" opacity="0.7">
@@ -82,9 +84,9 @@ export function Campos2({ onBuscar }) {
                 <Td>
                   <Input
                     bg="gray.50"
-                    placeholder={t("placeholder_abundancia")}
-                    value={fila.abundancia}
-                    onChange={(e) => handleChange(idx, "abundancia", e.target.value)}
+                    placeholder={t("placeholder_intensidad")}
+                    value={fila.intensidad}
+                    onChange={(e) => handleChange(idx, "intensidad", e.target.value)}
                   />
                 </Td>
               </Tr>
