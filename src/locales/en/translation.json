@@ -1,4 +1,6 @@
 {
+    "Descripcion": "More",
+    "texto":"This website is a mass spectra search and comparison tool for students, researchers, and educators working with mass spectrometry in chemistry, biochemistry, or related sciences. It is non-profit and was developed for educational purposes.",
     "descargar_txt": "Download Results .txt",
     "no_resultados": "No results found",
     "buscar": "Search",
@@ -25,8 +27,11 @@
     "placeholder_mz": "e.g. 256.24",
     "placeholder_abundancia": "e.g. 0.85",
     "agregar_fila": "Add row",
-    "warning_no_peaks": "No valid peaks to search similarity."
+    "warning_no_peaks": "No valid peaks to search similarity.",
 
-
+    
+    "contacto": "Contact",
+    "desarrolladores": "Developers",
+    "DB": "Databases Used in the Project"
   }
   

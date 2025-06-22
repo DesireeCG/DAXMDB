@@ -131,7 +131,7 @@ export function Campos2({ onBuscar }) {
         </>
       ) : (
         <Text mt="6" color="gray.500">
-          {t("No_resultados")}
+          
         </Text>
       )}
     </Box>

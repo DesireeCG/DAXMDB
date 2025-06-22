@@ -4,6 +4,13 @@ import { useTranslation } from "react-i18next";
 export function TitleSection() {
     const { t } = useTranslation(); // Función para traducir
 
+    const items = [
+        {
+            title: t("Descripcion"),
+            text: t("texto"),
+        },
+    ];
+
     return (
         <Box ml="10%" mr="10%" mt="10px" opacity="0.9">
             <Text fontSize="5xl" fontWeight="bold">
@@ -29,9 +36,4 @@ export function TitleSection() {
     );
 }
 
-const items = [
-    {
-        title: "More",
-        text: "Este sitio web es una herramienta de búsqueda y comparación de espectros de masas orientada a estudiantes, investigadores y docentes que trabajan con espectrometría de masas en el área de química, bioquímica o ciencias afines. No tiene fines de lucro y fue desarrollado con fines educativos."
-    }
-];
+

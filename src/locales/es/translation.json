@@ -1,4 +1,8 @@
 {
+
+    "Descripcion": "Más",
+    "texto":"Este sitio web es una herramienta de búsqueda y comparación de espectros de masas orientada a estudiantes, investigadores y docentes que trabajan con espectrometría de masas en el área de química, bioquímica o ciencias afines. No tiene fines de lucro y fue desarrollado con fines educativos.",
+    
     "descargar_txt": "Descargar Resultados .txt",
     "no_resultados": "No se encontraron resultados",
     "buscar": "Buscar",
@@ -13,6 +17,7 @@
     "No_resultados":"No se encontraron resultados",
     "Filtrar": "Filtrar",
 
+
     "Instrucciones_2": "Ingrese los siguientes campos si deseas una búsqueda más precisa:",
     "Intensidad":"Intensidad Relativa",
     "Mostrando": "Mostrando",
@@ -21,7 +26,13 @@
     "placeholder_mz": "Ej. 256.24",
     "placeholder_abundancia": "Ej. 0.85",
     "agregar_fila": "Agregar fila",
-    "warning_no_peaks": "No hay picos válidos para buscar similitud."
+    "warning_no_peaks": "No hay picos válidos para buscar similitud.", 
+
+
+    "contacto": "Contacto",
+    "desarrolladores": "Desarrolladores",
+    "DB": "Bases de Datos Utilizadas en el Proyecto"
+
 
 
   }
